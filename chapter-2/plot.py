@@ -15,11 +15,11 @@ plt.yticks(fontsize=15)
 plt.xlabel("Reservations", fontsize=15)
 plt.ylabel("Pizzas", fontsize=15)
 
-def plot_data(X, Y, prediction=None):
+def plot_data(X, Y, predict=None, weight=0, bias=0):
     plt.plot(X, Y, "bo")
 
-    if prediction is not None:
-        plt.plot([0, x_edge], [0, prediction], linewidth=1, color="g")
+    if predict is not None:
+        plt.plot([0, x_edge], [bias, predict(x_edge, weight, bias)], linewidth=1, color="g")
     
     plt.show()
 
