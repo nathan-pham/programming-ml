@@ -7,12 +7,15 @@ __dirname = os.path.dirname(__file__)
 
 sb.set()
 
-plt.axis([0, 50, 0, 50])
+x_edge = y_edge = 50
+
+plt.axis([0, x_edge, 0, y_edge])
 plt.xticks(fontsize=15)
 plt.yticks(fontsize=15)
 plt.xlabel("Reservations", fontsize=15)
 plt.ylabel("Pizzas", fontsize=15)
 
-X, Y = np.loadtxt(os.path.join(__dirname, "./pizza.txt"), skiprows=1, unpack=True)
-plt.plot(X, Y, "bo")
-plt.show()
+def plot_data(X, Y, prediction):
+    plt.plot(X, Y, "bo")
+    plt.plot([0, x_edge], [0, prediction], linewidth=1, color="g")
+    plt.show()
