@@ -15,4 +15,9 @@ matrix multiplication golden rule: number of columns of m1 must match number of 
               [ 11  12 ]
 
 calculating matrix[1][1] = (1, 2, 3) • (7, 8, 11) = (1 * 7) + (2 * 8) + (3 * 11) = 58
+
+matrix transpose: swaps matrix dimensions, flips matrix over diagonal
+[ 1 2 3 ] = tranpose => [ 1 4 ]
+[ 4 5 6 ]               [ 2 5 ]
+                        [ 3 6 ]
 """
