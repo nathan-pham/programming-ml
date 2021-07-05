@@ -5,3 +5,4 @@ Understanding Machine Learning algorithms and techniques with Python
 - chapter 2: linear regression
 - chapter 3: gradient descent
 - chapter 4: multi-variable linear regression 
+- chapter 5: binary classification
