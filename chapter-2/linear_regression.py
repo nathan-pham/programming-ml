@@ -5,7 +5,6 @@ from plot import plot_data, x_edge
 
 __dirname = os.path.dirname(__file__)
 
-# load data
 X, Y = np.loadtxt(os.path.join(__dirname, "./pizza.txt"), skiprows=1, unpack=True)
 
 def predict(X, w, b):
