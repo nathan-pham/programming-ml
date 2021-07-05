@@ -5,6 +5,16 @@ __dirname = os.path.dirname(__file__)
 
 X, Y = np.loadtxt(os.path.join(__dirname, "../chapter-2/pizza.txt"), skiprows=1, unpack=True)
 
+"""
+pitfalls of gradient descent,  the loss function should be:
+- convex (few features, one global maximum)
+- differentiable (also continuous)
+
+mean squared error is best for gradient descent 
+- absolute error has a non-differentiable cusp around 0
+- squaring errors means steeper slopes & faster, smooth improvements
+"""
+
 def predict(X, w, b):
     """
     model: y = x * weight + bias
