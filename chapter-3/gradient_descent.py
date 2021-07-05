@@ -39,14 +39,11 @@ def gradient(X, Y, w, b):
     return (w_gradient, b_gradient)
 
 def train(X, Y, iterations, learning_rate):
-    """
-    adjust weights every iteration by the learning rate
-    """
     w = b = 0
 
     for i in range(iterations):
         current_loss = loss(X, Y, w, b)
-        print("iteration: %4d => loss: %.6f" % (i + 1, current_loss))
+        print("iteration: %4d => loss: %.6f" % (i, current_loss))
         
         w_gradient, b_gradient = tuple(learning_rate * g for g in gradient(X, Y, w, b))
         w -= w_gradient
